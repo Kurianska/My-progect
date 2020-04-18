@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth/auth.service';
+// import { constructor } from 'firebase';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'first-progect';
+  title = 'my-todo';
+ 
+
+constructor (
+  public authService: AuthService
+) {}
 }
