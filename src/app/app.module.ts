@@ -9,7 +9,8 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { HeaderComponent } from './header/header.component';
+
+import { MaterialModule } from './material.module';
 
 
 
@@ -17,8 +18,8 @@ import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
+    AppComponent
+   
    
   ],
   imports: [
@@ -30,6 +31,7 @@ import { HeaderComponent } from './header/header.component';
     AngularFirestoreModule,
     MatInputModule,
     MatButtonModule,
+   MaterialModule,
    
   ],
   providers: [],

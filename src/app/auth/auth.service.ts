@@ -1,3 +1,4 @@
+  
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
@@ -13,7 +14,6 @@ export class AuthService {
 
   user$: Observable<User>;
   userDetail;
-  userDetails: any;
 
   constructor(
     private afAuth: AngularFireAuth,
@@ -38,6 +38,8 @@ export class AuthService {
     const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
 
     const data = {
+      name: user.name,
+      lastName: user.lastName,
       uid: user.uid,
       email: user.email
     }
@@ -58,5 +60,9 @@ export class AuthService {
   async logout() {
     this.router.navigate(['auth/login']);
     await this.afAuth.signOut();
+  }
+
+  get currentUserId(): string {
+    return this.userDetail == null ? this.userDetail.uid : '';
   }
 }

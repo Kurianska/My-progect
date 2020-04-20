@@ -23,15 +23,18 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.formLogin = this.fb.group({
+      name: ['', [Validators.required]],
+      lastName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]]
+       password: ['', [Validators.required]]
+
     });
   }
 
   login() {
     this.loginAccess = true;
     console.log(this.formLogin.value);
-    this.authService.login(this.formLogin.value.email, this.formLogin.value.password)
+    this.authService.login(this.formLogin.value.name, this.formLogin.value.lastName, this.formLogin.value.email, this.formLogin.value.password)
     .then(res => {
       this.loginAccess = false;
       console.log(res);

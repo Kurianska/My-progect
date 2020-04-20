@@ -5,10 +5,8 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AuthComponent } from './auth.component';
-import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms'
-import { MatButtonModule } from '@angular/material/button';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../material.module';
 
 
 @NgModule({
@@ -17,8 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     AuthRoutingModule,
     ReactiveFormsModule,
-    MatInputModule,
-    MatButtonModule
+    MaterialModule
   ]
 })
 export class AuthModule { }
