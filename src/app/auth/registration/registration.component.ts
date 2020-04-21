@@ -31,7 +31,7 @@ export class RegistrationComponent implements OnInit {
   
   registration() {
     console.log(this.formReg.value);
-    this.authService.register(this.formReg.value.name, this.formReg.value.lastName, this.formReg.value.email, this.formReg.value.password)
+    this.authService.register(this.formReg.value.email, this.formReg.value.password)
     .then(res => {
       console.log(res);
       this.router.navigate(['./dashboard']);
