@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 
 import { MaterialModule } from './material.module';
+import { CabinetComponent } from './cabinet/cabinet.component';
 
 
 
@@ -18,8 +19,9 @@ import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
-    AppComponent
-   
+    AppComponent,
+    CabinetComponent
+    
    
   ],
   imports: [
