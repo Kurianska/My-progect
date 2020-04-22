@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabinetComponent implements OnInit {
 
+  
   constructor() { }
 
   ngOnInit(): void {
